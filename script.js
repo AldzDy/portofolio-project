@@ -59,12 +59,19 @@
     }
     typeWriter();
 
-    // Menu toggle
+    // Menu toggle with animation
     function toggleMenu() {
+      const hamburgerBtn = document.getElementById('hamburgerBtn');
       const nav = document.getElementById('navMenu');
+      const toggle = document.querySelector('.menu-toggle');
       nav.classList.toggle('show');
+      toggle.classList.toggle('active');
     }
 
+   hamburgerBtn.addEventListener('click', () => {
+      navMenu.style.display = navMenu.style.display === 'block' ? 'none' : 'block';
+      });
+        
     // Music toggle
     function toggleMusic() {
       const audio = document.getElementById('bgMusic');
@@ -74,3 +81,21 @@
         audio.pause();
       }
     }
+
+    // Smooth scrolling for nav links
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        target.scrollIntoView({
+          behavior: 'smooth'
+        });
+        // Close menu on mobile after click
+        const nav = document.getElementById('navMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        if (nav.classList.contains('show')) {
+          nav.classList.remove('show');
+          toggle.classList.remove('active');
+        }
+      });
+    });

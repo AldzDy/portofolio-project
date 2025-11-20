@@ -34,9 +34,49 @@
       color: #00d4ff;
       text-decoration: none;
     }
+     /* Styling untuk hamburger menu */
+        .hamburger {
+            display: block;
+            cursor: pointer;
+            padding: 10px;
+            background: none;
+            border: none;
+        }
+        
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px 0;
+            background-color: #333;
+            transition: 0.3s;
+        }
     .menu-toggle {
       display: none;
       cursor: pointer;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 30px;
+      height: 30px;
+      background: transparent;
+      border: none;
+      padding: 0;
+      transition: transform 0.3s;
+    }
+    .menu-toggle span {
+      width: 100%;
+      height: 3px;
+      background: #fff;
+      transition: all 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -6px);
     }
     nav {
       display: flex;
@@ -107,10 +147,11 @@
       color: #000;
       text-decoration: none;
       border-radius: 25px;
-      transition: background 0.3s;
+      transition: background 0.3s, transform 0.3s;
     }
     .social-buttons a:hover {
       background: #0099cc;
+      transform: scale(1.05);
     }
     .section-title {
       font-size: 2.5rem;
@@ -163,10 +204,11 @@
       border-radius: 15px;
       backdrop-filter: blur(10px);
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-      transition: transform 0.3s;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
     .project-box:hover {
       transform: translateY(-10px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
     }
     footer {
       text-align: center;
@@ -186,10 +228,11 @@
       align-items: center;
       cursor: pointer;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-      transition: background 0.3s;
+      transition: background 0.3s, transform 0.3s;
     }
     .music-player:hover {
       background: #0099cc;
+      transform: scale(1.1);
     }
     .music-player i {
       color: #000;
@@ -207,11 +250,18 @@
         width: 100%;
         background: rgba(0, 0, 0, 0.9);
         padding: 1rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
       }
       nav.show {
         display: flex;
       }
       .menu-toggle {
-        display: block;
+        display: flex;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      .typing-text, .typing-desc {
+        font-size: 1.2rem;
       }
     }

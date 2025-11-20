@@ -11,8 +11,23 @@
   <canvas id="stars"></canvas>
 
   <header>
-    <a class="logo">Reyvaldo Kurniawan</a>
-    <i class="fas fa-bars menu-toggle" onclick="toggleMenu()"></i>
+    <a class="logo" href="#home">Reyvaldo Kurniawan</a>
+    
+        <!-- Toggle button -->
+    <button class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    
+        <!-- Hamburger button -->
+    <button class="hamburger" id="hamburgerBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    
+        <!-- NavMenu -->
     <nav id="navMenu">
       <a href="#home" class="active">Home</a>
       <a href="#about">About</a>
@@ -20,18 +35,16 @@
       <a href="#projects">Projects</a>
       <a href="#motivation">Motivation</a>
     </nav>
-    </header><section id="home" class="home">
-  <div class="profile-img">
-    <img src="https://i.postimg.cc/1XbrkJ14/IMG-20251031-144451.jpg" alt="Profile"/>
-        </font>
-    <font face="Play" class="cn"><marquee behavior="alternate" direction="left" scrollamount="53" scrolldelay="10" width="100%"><font color="red">___________________________________________________</font></marquee>
-     <marquee behavior="alternate" scrollamount="5" style="border:1px solid;" width="70%">-= Cyberscurity <font color="cyan">|</font> Cybercrime <font color="red">|</font> Hacker 651 <font color="red">|</font> Hacktivism <font color="red">|</font> Coding <font color="cyan">|</font> Root#xXx <font color="cyan">|<font color="green"> jav_4fun <font color="cyan">|<font color="red"> Hacked Scurity <font color="cyan">=-</center></font></marquee></div>
-     <marquee behavior="alternate" direction="left" scrollamount="51" scrolldelay="51" width="100%"><font color="white">___________________________________________________</font></marquee></div></center>
-    </font>
+  </header>
+
+  <section id="home" class="home">
+    <div class="profile-img">
+      <img src="https://i.postimg.cc/1XbrkJ14/IMG-20251031-144451.jpg" alt="Profile"/>
     </div>
     <h1>Hello, I'm <span>Reyvaldo Kurniawan</span></h1>
     <div class="typing-text" id="typing-role">Aspiring Developer & Tech Enthusiast</div>
     <div class="typing-desc" id="typing-desc">Passionate about coding, cybersecurity, and building innovative solutions.</div>
+    
     <div class="social-buttons">
       <a href="https://wa.me/6283122635477"><i class="fab fa-whatsapp"></i> WhatsApp</a>
       <a href="https://t.me/XtrolCome"><i class="fab fa-telegram"></i> Telegram</a>
@@ -42,7 +55,7 @@
   <section id="about">
     <h2 class="section-title">About Me</h2>
     <p class="description">
-    Hi, I'm Reyvaldo Kurniawan, a 15-year-old vocational high school student majoring in Computer and Network Engineering. I'm passionate about technology, programming, and exploring the world of cybersecurity ethicall
+      Hi, I'm Reyvaldo Kurniawan, a 15-year-old vocational high school student majoring in Computer and Network Engineering. I'm passionate about technology, programming, and exploring the world of cybersecurity ethically.
     </p>
   </section>
 
@@ -64,6 +77,15 @@
           <strong>JavaScript: 85%</strong>
           <div class="skill-bar">
             <div class="skill-fill" style="--skill-level: 85%;"></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/lua/lua-original.svg" alt="Lua">
+        <div class="skill">
+          <strong>Lua: 75%</strong>
+          <div class="skill-bar">
+            <div class="skill-fill" style="--skill-level: 75%;"></div>
           </div>
         </div>
       </div>
@@ -90,6 +112,10 @@
         <h3>Portfolio Website</h3>
         <p>A sleek portfolio website showcasing skills and projects, built with modern web technologies.</p>
       </div>
+      <div class="project-box">
+        <h3>Lua Script</h3>
+        <p>A Lua script is a set of instructions written in the Lua programming language, which is a powerful, lightweight, and embeddable scripting language. These scripts are typically used to add functionality to other applications, such as video games, industrial control systems, and web servers, rather than running as standalone programs. A Lua script provides commands that a host program executes to perform custom tasks.</p>
+      </div>
     </div>
   </section>
 
@@ -103,12 +129,11 @@
   <footer>
     <p>&copy; 2025 Reyvaldo Kurniawan. All rights reserved.</p>
   </footer>
-
+  
   <div class="music-player" onclick="toggleMusic()">
-  <i class="fas fa-music"></i>
-  <audio id="bgMusic" src="https://files.catbox.moe/a5ncoy.mp3" loop autoplay></audio>
-</div>
-<script src="/script.js" defer>
-</script>
+    <i class="fas fa-music"></i>
+    <audio id="bgMusic" src="https://files.catbox.moe/a5ncoy.mp3" loop autoplay></audio>
+  </div>
+<script src="/script.js" defer></script>
 </body>
 </html>
