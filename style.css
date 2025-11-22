@@ -36,21 +36,10 @@
     }
      /* Styling untuk hamburger menu */
         .hamburger {
-            display: block;
-            cursor: pointer;
-            padding: 10px;
-            background: none;
-            border: none;
-        }
-        
-        .hamburger span {
-            display: block;
-            width: 25px;
-            height: 3px;
-            margin: 5px 0;
-            background-color: #333;
-            transition: 0.3s;
-        }
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
     .menu-toggle {
       display: none;
       cursor: pointer;
